@@ -34,3 +34,18 @@ class Player(GameSprite):
 back = (255,255,255)
 window = display.set_mode((600,500))
 window.fill(back)
+
+game = True
+finish = False
+clock = time.Clock()
+FPS = 60
+
+racker1 = Player('racker.png', 30, 200,4,50,150)
+racker2 = Player('racker.png',30,200,4,50,150)
+
+ball = GameSprite('tenis_ball.png', 200, 200, 4 , 50, 50)
+
+font.init()
+font = font.Font(None,35)
+lose1 = font.render('1 ИГРОК неВИНЕР', True, (180,0,0))
+lose2 = font.render('2 ИГРОК неВИНЕР', True, (180,0,0))
